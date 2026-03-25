@@ -87,8 +87,10 @@ except (FileNotFoundError, json.JSONDecodeError):
 data['profiles']['PROFILE_NAME'] = {
     'site': 'SITE.atlassian.net',
     'email': 'EMAIL',
+    'token': 'TOKEN',
     'description': 'DESCRIPTION'
 }
+# Note: 'token' is optional. Omit the key or set to '' if the user does not provide one.
 if not data['active']:
     data['active'] = 'PROFILE_NAME'
 json.dump(data, open(path, 'w'), indent=2)
@@ -102,6 +104,8 @@ After creating, if this is the first or active profile, update the session envir
 echo "export ACLI_ACTIVE_PROFILE=\"PROFILE_NAME\"" >> "$CLAUDE_ENV_FILE"
 echo "export ACLI_SITE=\"SITE.atlassian.net\"" >> "$CLAUDE_ENV_FILE"
 echo "export ACLI_EMAIL=\"EMAIL\"" >> "$CLAUDE_ENV_FILE"
+# Only export ACLI_TOKEN if the user provided a token:
+echo "export ACLI_TOKEN=\"TOKEN\"" >> "$CLAUDE_ENV_FILE"
 ```
 
 ### Switch Profile
@@ -128,6 +132,8 @@ print(f'Switched to {target}: {p[\"site\"]} ({p[\"email\"]})')
 echo "export ACLI_ACTIVE_PROFILE=\"TARGET_PROFILE\"" >> "$CLAUDE_ENV_FILE"
 echo "export ACLI_SITE=\"SITE\"" >> "$CLAUDE_ENV_FILE"
 echo "export ACLI_EMAIL=\"EMAIL\"" >> "$CLAUDE_ENV_FILE"
+# Only export ACLI_TOKEN if the profile has a token:
+echo "export ACLI_TOKEN=\"TOKEN\"" >> "$CLAUDE_ENV_FILE"
 ```
 
 ### Delete Profile
@@ -161,9 +167,11 @@ else:
 3. Profile names must be alphanumeric with hyphens (no spaces)
 4. The `site` field should be a valid Atlassian site (e.g., `mysite.atlassian.net`)
 5. Use the cross-platform Python detection pattern: `$(command -v python3 2>/dev/null || command -v python 2>/dev/null)`
+6. The `token` field is optional. It is only needed for Confluence page create/update/delete and CQL search operations that use the REST API directly. If the user does not provide a token, omit the field or leave it empty.
 
 ## Cross-References
 
 - Use **acli-setup** if ACLI is not installed or no authentication exists
 - All Jira skills (**jira-workitem**, **jira-search**, **jira-sprint**) read `$ACLI_SITE` automatically
+- Confluence skills (**confluence-space**, **confluence-page**, **confluence-search**) read `$ACLI_SITE` and `$ACLI_TOKEN`
 - **admin-user** reads profile info for admin operations

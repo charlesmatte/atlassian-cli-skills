@@ -31,6 +31,10 @@ try {
             "export ACLI_SITE=`"$site`"",
             "export ACLI_EMAIL=`"$email`""
         )
+        $token = $profile.token
+        if ($token) {
+            $lines += "export ACLI_TOKEN=`"$token`""
+        }
         $lines | Out-File -FilePath $env:CLAUDE_ENV_FILE -Append -Encoding utf8
     }
 }

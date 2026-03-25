@@ -32,6 +32,9 @@ p = data['profiles'][active]
 print(f'export ACLI_ACTIVE_PROFILE=\"{active}\"')
 print(f'export ACLI_SITE=\"{p.get(\"site\", \"\")}\"')
 print(f'export ACLI_EMAIL=\"{p.get(\"email\", \"\")}\"')
+token = p.get('token', '')
+if token:
+    print(f'export ACLI_TOKEN=\"{token}\"')
 " 2>/dev/null)
 
 # Write to CLAUDE_ENV_FILE if available

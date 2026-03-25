@@ -18,6 +18,7 @@ This path works cross-platform:
     "profile-name": {
       "site": "mysite.atlassian.net",
       "email": "user@example.com",
+      "token": "ATATT3xFfGF0...",
       "description": "Human-readable description"
     }
   }
@@ -39,6 +40,7 @@ This path works cross-platform:
 |-------|------|----------|-------------|
 | `site` | string | Yes | Atlassian site hostname (e.g., `mycompany.atlassian.net`) |
 | `email` | string | Yes | Email address for authentication |
+| `token` | string | No | Atlassian API token for REST API calls (Confluence page CRUD, CQL search). Same token used for `acli auth login`. |
 | `description` | string | No | Human-readable label for the profile |
 
 ## Environment Variables
@@ -50,6 +52,7 @@ When a profile is active, the following environment variables are set in `$CLAUD
 | `ACLI_ACTIVE_PROFILE` | `work` | Name of the active profile |
 | `ACLI_SITE` | `mycompany.atlassian.net` | Site hostname for `--site` flag |
 | `ACLI_EMAIL` | `user@company.com` | Email for reference |
+| `ACLI_TOKEN` | `ATATT3x...` | API token for REST API calls (Confluence). Only set if `token` is present in the profile. |
 
 ## Validation Rules
 

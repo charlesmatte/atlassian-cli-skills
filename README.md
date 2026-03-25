@@ -8,6 +8,9 @@ A [Claude Code](https://claude.ai/code) skills plugin that integrates the [Atlas
 - **Jira work items** — Create, edit, transition, search, and manage issues
 - **JQL search** — Query Jira with full JQL support and saved filters
 - **Sprint management** — View boards, sprints, and backlog
+- **Confluence spaces** — List, create, update, archive, and restore spaces
+- **Confluence pages** — Create, view, update, and delete pages with storage format support
+- **Confluence search** — Search content with CQL (Confluence Query Language)
 - **Admin operations** — Manage organization users (activate, deactivate, delete)
 - **Cross-platform** — Works on Windows, macOS, and Linux
 
@@ -278,6 +281,42 @@ Examples:
 - "List all organization users"
 - "Deactivate user@example.com"
 - "Reactivate user@example.com"
+
+### `/confluence-space` — Space Management
+
+List, view, create, update, archive, and restore Confluence spaces.
+
+Examples:
+- "List all Confluence spaces"
+- "Create a space called 'Engineering' with key ENG"
+- "Archive the OLD space"
+- "Show me details for the DEV space"
+
+### `/confluence-page` — Page Management
+
+Create, view, update, and delete Confluence pages. Uses ACLI for viewing and the Confluence REST API for write operations.
+
+Examples:
+- "View page 12345"
+- "Create a new page in the DEV space titled 'Deployment Guide'"
+- "Update page 12345 with the new content"
+- "Delete page 12345"
+- "List child pages under page 12345"
+
+> **Note:** Page create, update, and delete operations require an API token in your profile. If you haven't added one yet, update your profile with `/acli-profile`.
+
+### `/confluence-search` — CQL Search
+
+Search Confluence content using CQL (Confluence Query Language). Claude translates natural language to CQL automatically.
+
+Examples:
+- "Find pages about deployment in the DEV space"
+- "Show recently updated pages"
+- "Search for pages with label 'runbook'"
+- "Find all blog posts from this month"
+- "Search for pages I created"
+
+> **Note:** Confluence search requires an API token in your profile.
 
 ## Multi-Profile Workflow
 
