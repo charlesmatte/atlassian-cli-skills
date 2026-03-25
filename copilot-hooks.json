@@ -1,0 +1,11 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "bash": "${PLUGIN_ROOT}/hooks/scripts/load-profile.sh",
+        "powershell": "${PLUGIN_ROOT}/hooks/scripts/load-profile.ps1"
+      }
+    ]
+  }
+}

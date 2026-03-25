@@ -1,0 +1,21 @@
+{
+  "name": "atlassian",
+  "description": "Atlassian CLI integration for Jira, Confluence, and admin operations. Manage issues, sprints, boards, and users directly from your development environment with multi-profile support for switching between Atlassian sites.",
+  "version": "0.1.0",
+  "author": {
+    "name": "cmatte"
+  },
+  "license": "MIT",
+  "keywords": [
+    "atlassian",
+    "jira",
+    "confluence",
+    "acli",
+    "devops",
+    "project-management",
+    "issue-tracking"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "hooks": "./copilot-hooks.json"
+}
