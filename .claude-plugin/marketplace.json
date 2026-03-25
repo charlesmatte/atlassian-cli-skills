@@ -8,13 +8,7 @@
     {
       "name": "labyrinthe-acli",
       "description": "Atlassian CLI integration for Jira, Confluence, and admin operations. Manage issues, sprints, boards, and users directly from Claude Code with multi-profile support for switching between Atlassian sites.",
-      "source": {
-        "source": "git-subdir",
-        "url": "charlesmatte/atlassian-cli-skills",
-        "path": "plugins/atlassian-cli-skills",
-        "ref": "main",
-        "sha": "c8d923ffe0ae48350cbcdb254621277f15b2f846"
-      },
+      "source": "./plugins/atlassian-cli-skills",
       "homepage": "https://github.com/charlesmatte/atlassian-cli-skills"
     }
   ]
