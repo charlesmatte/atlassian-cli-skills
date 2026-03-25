@@ -8,7 +8,7 @@
     {
       "name": "atlassian",
       "description": "Atlassian CLI integration for Jira, Confluence, and admin operations. Manage issues, sprints, boards, and users directly from Claude Code with multi-profile support for switching between Atlassian sites.",
-      "source": ".",
+      "source": "./plugins/atlassian-cli-skills",
       "homepage": "https://github.com/charlesmatte/atlassian-cli-skills"
     }
   ]
