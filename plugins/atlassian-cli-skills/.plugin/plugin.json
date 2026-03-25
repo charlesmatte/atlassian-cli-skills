@@ -1,5 +1,5 @@
 {
-  "name": "atlassian",
+  "name": "labyrinthe-acli",
   "description": "Atlassian CLI integration for Jira, Confluence, and admin operations. Manage issues, sprints, boards, and users directly from your development environment with multi-profile support for switching between Atlassian sites.",
   "version": "0.1.0",
   "author": {

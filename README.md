@@ -33,7 +33,7 @@ From within Claude Code, run:
 ### Step 2: Install the plugin
 
 ```
-/plugin install atlassian@atlassian-cli-skills
+/plugin install labyrinthe-acli@atlassian-cli-skills
 ```
 
 Choose your preferred scope when prompted:
@@ -59,7 +59,7 @@ Then in Claude Code:
 
 ```
 /plugin marketplace add ./atlassian-cli-skills
-/plugin install atlassian@atlassian-cli-skills
+/plugin install labyrinthe-acli@atlassian-cli-skills
 ```
 
 ## Getting Started
@@ -383,7 +383,7 @@ Profile management uses Python for JSON manipulation. Ensure `python3` (macOS/Li
 ## Uninstall
 
 ```
-/plugin uninstall atlassian@atlassian-cli-skills
+/plugin uninstall labyrinthe-acli@atlassian-cli-skills
 ```
 
 To also remove your saved profiles:
