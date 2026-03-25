@@ -24,13 +24,13 @@ A [Claude Code](https://claude.ai/code) skills plugin that integrates the [Atlas
 From within Claude Code, run:
 
 ```
-/plugin marketplace add cmatte/atlassian-cli
+/plugin marketplace add charlesmatte/atlassian-cli-skills
 ```
 
 ### Step 2: Install the plugin
 
 ```
-/plugin install atlassian@atlassian-cli
+/plugin install atlassian@atlassian-cli-skills
 ```
 
 Choose your preferred scope when prompted:
@@ -49,14 +49,14 @@ If you're in an active session, reload the plugin:
 ### Alternative: Install from a local clone
 
 ```bash
-git clone https://github.com/cmatte/atlassian-cli.git
+git clone https://github.com/charlesmatte/atlassian-cli-skills.git
 ```
 
 Then in Claude Code:
 
 ```
-/plugin marketplace add ./atlassian-cli
-/plugin install atlassian@atlassian-cli
+/plugin marketplace add ./atlassian-cli-skills
+/plugin install atlassian@atlassian-cli-skills
 ```
 
 ## Getting Started
@@ -344,7 +344,7 @@ Profile management uses Python for JSON manipulation. Ensure `python3` (macOS/Li
 ## Uninstall
 
 ```
-/plugin uninstall atlassian@atlassian-cli
+/plugin uninstall atlassian@atlassian-cli-skills
 ```
 
 To also remove your saved profiles:

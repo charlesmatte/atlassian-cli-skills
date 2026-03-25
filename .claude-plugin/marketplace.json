@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "atlassian-cli",
+  "name": "atlassian-cli-skills",
   "owner": {
     "name": "cmatte"
   },
@@ -9,7 +9,7 @@
       "name": "atlassian",
       "description": "Atlassian CLI integration for Jira, Confluence, and admin operations. Manage issues, sprints, boards, and users directly from Claude Code with multi-profile support for switching between Atlassian sites.",
       "source": ".",
-      "homepage": "https://github.com/cmatte/atlassian-cli"
+      "homepage": "https://github.com/charlesmatte/atlassian-cli-skills"
     }
   ]
 }
